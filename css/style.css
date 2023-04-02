@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar ol{
+    list-style: none;
+}
+.navbar{
+    text-align: center;
+    background: #f46b45;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 5px 0;
+}
+.navbar ol li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.navbar ol li a{
+    text-decoration: none;
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(240, 232, 232);
+    /* background-color: black; */
+    padding: 10px 15px;
+    display: block;
+    
+    
+    position: relative;
+    z-index: 1;
+    
+    
+    
+
+}
+
+    
+
+
+.navbar ol li a::before{
+    content: ' ';
+    width: 100%;
+    height: 0%;
+    background-color: rgb(8, 8, 8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+.navbar ol li:hover a::before{
+    height: 50%;
+}
+.navbar ol li a::after{
+    content: ' ';
+    width: 100%;
+    height: 0%;
+    background-color:rgb(18, 18, 18);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+.navbar ol li:hover a::after{
+    height: 50%;
+}
+.navbar ol li ol li{
+    display: block;
+    margin: 0;
+    
+    
+}
+.navbar ol li ol{
+    
+    position: absolute;
+    background-color: #555;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 80px;
+    transition: 0.5s;
+    
+}
+.navbar ol li:hover ol{
+    opacity: 1;
+    visibility: visible;
+    margin-left: 0;
+    
+}
